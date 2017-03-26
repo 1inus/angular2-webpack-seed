@@ -1,9 +1,9 @@
-#usage
-##first
+# usage
+## first
 ```shell
 npm install
 ```
-##second
+## second
 ```shell
 webpack
 ```
@@ -11,7 +11,7 @@ or
 ```shell
 webpack --watch
 ```
-#package.json
+# package.json
 ```javascript
 {
   "name": "angular2-webpack-seed",
@@ -56,7 +56,7 @@ webpack --watch
 }
 
 ```
-#webpack.config.js
+# webpack.config.js
 ```javascript
 var path = require('path');
 var webpack = require('webpack');
