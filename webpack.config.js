@@ -4,11 +4,13 @@ var webpack = require('webpack');
 module.exports = {
 	entry: {
 		main: './src/app/main.ts'
+		//pack once
+		,vendor:"./src/vendor.ts"
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		publicPath: '/dist/',
-		filename: 'bundle.js'
+		filename: 'app.bundle.js'
 	},
 	
 	module: {
@@ -21,9 +23,11 @@ module.exports = {
 	},
 	
 	plugins: [
+		new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' }),
 		new webpack.BannerPlugin('created by liangwei<cnliangwei@foxmail.com>'),
 		new webpack.optimize.UglifyJsPlugin({
-			compress: {warnings: false}
+			compress: {warnings: false},
+			comments:false
 		})
 	]
 };

@@ -1,0 +1,10 @@
+import "zone.js";
+import "reflect-metadata";
+import "@angular/core";
+import "@angular/platform-browser";
+import "@angular/platform-browser-dynamic";
+import "@angular/common";
+import "@angular/compiler";
+import "@angular/forms";
+import "@angular/http";
+import "@angular/router";
